@@ -1,0 +1,172 @@
+body, ul{
+    margin: 0px;
+    padding: 0px;
+    display: flexbox;
+}
+
+a {
+    color: chartreuse;
+    text-decoration: none;
+    font-family: 'Economica';
+
+}
+
+#header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn{
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    #btn {
+        display: block;
+    }
+    #menu {
+        /* display: none; */ 
+        position: absolute ;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        display: block;
+        height: calc(100vh - 70px);
+        z-index: 1000;
+
+    }
+    #nav.active #menun {
+        display: flex;
+    }
+}
+
+
+h1 {
+    height: fit-content;
+    text-align-last: center;
+    font-family: 'voltaire';
+    font-size: 50px;
+    color: black;
+    padding: 50px;
+        
+}
+
+h2 {
+    text-align: center;
+    font-family: 'economica';
+    font-size: 30px;
+    color: black;
+    
+}
+
+h3{
+    text-align: center;
+    font-family: 'economica';
+    font-size: 50px;
+    background-color: chartreuse;
+    
+}
+
+
+
+div
+{background-color: black;
+    background-size: 100px;
+    
+}
+
+.texto-com-background {
+    background-color: chartreuse;
+    box-sizing: content-box;
+
+}
+
+#foto-do-site {
+    align-items: left;
+
+}
+
+button {
+    color: aliceblue;
+    background-color: blueviolet;
+    font-family: 'economica';
+    list-style: none;
+    gap: .5rem;
+    font-size: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
